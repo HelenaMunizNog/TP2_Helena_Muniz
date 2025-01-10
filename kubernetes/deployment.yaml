@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playlist-recomendada
+  namespace: helenanogueira
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: playlist-recomendada
+  template:
+    metadata:
+      labels:
+        app: playlist-recomendada
+    spec:
+      containers:
+      - name: playlist-recomendada
+        image: helenanogueira/recomendador_ap:v1
+        ports:
+        - containerPort: 9000
+        volumeMounts:
+        - name: model-volume
+          mountPath: /app/data
+      volumes:
+      - name: model-volume
+        persistentVolumeClaim:
+          claimName: model-pvc

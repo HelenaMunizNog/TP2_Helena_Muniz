@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gerador-ml
+  namespace: helenanogueira
+spec:
+  template:
+    spec:
+      containers:
+      - name: gerador-ml
+        image: helenanogueira/recomendador_ml:v1
+        volumeMounts:
+        - name: model-volume
+          mountPath: /app/data
+      restartPolicy: Never
+      volumes:
+      - name: model-volume
+        persistentVolumeClaim:
+          claimName: model-pvc
+  backoffLimit: 4
