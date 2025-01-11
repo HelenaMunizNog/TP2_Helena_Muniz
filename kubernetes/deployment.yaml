@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: playlist-recomendada
-        image: helenanogueira/recomendador_ap:v1
+        image: helenanogueira/recomendador_ap:v2
         ports:
         - containerPort: 9000
         volumeMounts:
