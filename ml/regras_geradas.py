@@ -77,5 +77,7 @@ if __name__ == "__main__":
     caminho_musicas_dataset = '/app/datasets/2023_spotify_songs.csv'
     caminho_saida = '/app/data/rules.pkl'
 
+    os.makedirs('/app/data', exist_ok=True)
+
     gerar_modelo(caminhos_datasets, caminho_saida, caminho_musicas_dataset)
     print(f"Modelo gerado e salvo em {caminho_saida}")
