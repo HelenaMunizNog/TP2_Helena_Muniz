@@ -1,0 +1,11 @@
+project: helenanogueira-project
+source:
+  repoURL: https://github.com/HelenaMunizNog/TP2_Helena_Muniz.git
+  path: kubernetes
+  targetRevision: HEAD
+destination:
+  server: https://kubernetes.default.svc
+  namespace: helenanogueira
+syncPolicy:
+  automated:
+    selfHeal: true
