@@ -9,6 +9,6 @@ spec:
   type: NodePort
   ports:
     - protocol: TCP
-      port: 44444
+      port: 40401
       targetPort: 5000
-      nodePort: 44444
+      nodePort: 40401
