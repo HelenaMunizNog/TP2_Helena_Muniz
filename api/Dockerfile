@@ -1,7 +1,7 @@
 FROM python:3.9-slim-bullseye
 LABEL authors="helenanogueira"
 
-EXPOSE 9000
+EXPOSE 5000
 
 WORKDIR /app
 
