@@ -5,7 +5,11 @@ import os
 from datetime import datetime
 from collections import Counter
 
-app = Flask(__name__)
+from flask_cors import CORS
+
+app = Flask(name)
+CORS(app)
+
 logging.basicConfig(level=logging.INFO)
 
 modelo_ultima_modificacao = None
