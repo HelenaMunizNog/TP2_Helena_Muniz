@@ -5,7 +5,7 @@ metadata:
   namespace: helenanogueira
 spec:
   selector:
-    app: recomendador
+    app: playlist-recomendada
   type: NodePort
   ports:
     - protocol: TCP
